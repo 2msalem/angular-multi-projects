@@ -1,0 +1,45 @@
+<p-menubar [model]="items"></p-menubar>
+
+
+<div class="m-5">
+  <p-listbox [options]="companies" [multiple]="true" optionLabel="name" [listStyle]="{'max-height':'250px'}">
+    <ng-template pTemplate="header">
+        Companies
+    </ng-template>
+    <ng-template let-company pTemplate="item">
+        <div class="company-item">
+            <img src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" style="height: 50px; width: 50px;" />
+            <div class="ms-4">
+              <span >
+                {{company.name}}
+              </span>
+              <div>
+                Employees:
+                <span *ngFor="let emp of company.employees; let index = index;">
+                  <span>
+                    {{emp.name}}
+                  </span>
+                  <span class="me-1" *ngIf="index + 1 !== company.employees.length">
+                  ,
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <span class="ms-3">
+          Footer Content
+        </span>
+    </ng-template>
+  </p-listbox>
+</div>
+
+<p-cascadeSelect [options]="companies" optionLabel="name" optionGroupLabel="name"
+    [optionGroupChildren]="['employees']" [style]="{'minWidth': '14rem'}"></p-cascadeSelect>
+
+<p-dock [model]="dockItems" position="bottom">
+  <ng-template pTemplate="item" let-item>
+      <img [src]="item.icon" [alt]="item.label" width="100%">
+  </ng-template>
+</p-dock>
