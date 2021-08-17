@@ -43,7 +43,7 @@ export class MainComponent implements OnInit {
 							{ label: 'Other' },
 						],
 					},
-					{ label: 'Open' },
+					{ label: 'Back', routerLink: '../../' },
 					{ label: 'Quit' },
 				],
 			},

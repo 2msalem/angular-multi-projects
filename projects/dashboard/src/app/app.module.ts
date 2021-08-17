@@ -15,10 +15,10 @@ import { MainModule } from './main/main.module';
 	bootstrap: [HomeComponent],
 })
 export class DashboardModule {
-	static forRoot(): ModuleWithProviders<MainModule> {
-		return {
-			ngModule: MainModule,
-			providers: [],
-		};
-	}
+	// static forRoot(): ModuleWithProviders<MainModule> {
+	// 	return {
+	// 		ngModule: MainModule,
+	// 		providers: [],
+	// 	};
+	// }
 }

@@ -7,6 +7,7 @@ import { DashboardModule } from '../../projects/dashboard/src/app/app.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
 	declarations: [AppComponent, TestComponent],
@@ -14,8 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
-		DashboardModule.forRoot(),
+		// DashboardModule.forRoot(),
 		BrowserAnimationsModule,
+		ButtonModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
