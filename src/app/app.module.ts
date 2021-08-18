@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
 	declarations: [AppComponent, TestComponent],
@@ -18,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
 		// DashboardModule.forRoot(),
 		BrowserAnimationsModule,
 		ButtonModule,
+		MenubarModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
